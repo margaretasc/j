@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apple Notes Style</title>
+  <title>Notes</title>
 
   <style>
     * {
@@ -12,23 +12,26 @@
       padding: 0;
     }
 
+    html,
     body {
+      width: 100%;
+      min-height: 100%;
       background: #000;
       color: #f5f5f7;
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
         "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
-      min-height: 100vh;
+      overflow-x: hidden;
       overflow-y: auto;
     }
 
     .phone-screen {
       width: 100%;
       max-width: 430px;
-      height: 100vh;
+      min-height: 100vh;
       margin: 0 auto;
       background: #000;
       position: relative;
-      padding: 48px 28px 120px;
+      padding: 48px 28px 130px;
     }
 
     .status-bar {
@@ -37,7 +40,6 @@
       align-items: center;
       font-size: 17px;
       font-weight: 600;
-      color: #f5f5f7;
       margin-bottom: 45px;
     }
 
@@ -46,6 +48,15 @@
       gap: 8px;
       align-items: center;
       font-size: 15px;
+    }
+
+    .battery {
+      background: #a8a8a8;
+      color: #000;
+      border-radius: 8px;
+      padding: 1px 7px;
+      font-size: 15px;
+      font-weight: 700;
     }
 
     .top-controls {
@@ -65,8 +76,7 @@
       align-items: center;
       justify-content: center;
       color: #f5f5f7;
-      font-size: 34px;
-      line-height: 1;
+      font-size: 30px;
     }
 
     .right-controls {
@@ -87,42 +97,40 @@
       justify-content: center;
       gap: 17px;
       color: #f5f5f7;
-      font-size: 27px;
+      font-size: 24px;
     }
 
     .date {
       text-align: center;
       color: #8e8e93;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 500;
       margin: 20px 0 22px;
       letter-spacing: 0.2px;
     }
 
-    .note-content {
-      padding-top: 2px;
-    }
-
     .note-title {
-      font-size: 32px;
+      font-size: 28px;
       font-weight: 700;
-      letter-spacing: -0.6px;
-      margin-bottom: 42px;
+      letter-spacing: -0.5px;
+      margin-bottom: 32px;
       color: #f5f5f7;
     }
 
     .note-text {
-      font-size: 17px;
-      font-weight: 400;
-      letter-spacing: -0.3px;
+      font-size: 16px;
+      line-height: 1.52;
+      letter-spacing: -0.15px;
       color: #f5f5f7;
-      line-height: 1.35;
+      white-space: pre-line;
+      padding-bottom: 40px;
     }
 
     .bottom-bar {
-      position: absolute;
-      left: 28px;
-      bottom: 34px;
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 28px;
       height: 56px;
       width: 235px;
       border-radius: 32px;
@@ -132,13 +140,14 @@
       align-items: center;
       justify-content: space-around;
       color: #f5f5f7;
-      font-size: 30px;
+      font-size: 24px;
+      z-index: 10;
     }
 
     .compose-btn {
-      position: absolute;
-      right: 28px;
-      bottom: 34px;
+      position: fixed;
+      right: max(28px, calc(50% - 187px));
+      bottom: 28px;
       width: 56px;
       height: 56px;
       border-radius: 50%;
@@ -148,28 +157,8 @@
       align-items: center;
       justify-content: center;
       color: #f5f5f7;
-      font-size: 28px;
-    }
-
-    .battery {
-      background: #a8a8a8;
-      color: #000;
-      border-radius: 8px;
-      padding: 1px 7px;
-      font-size: 15px;
-      font-weight: 700;
-    }
-
-    @media (min-width: 431px) {
-      body {
-        display: flex;
-        justify-content: center;
-      }
-
-      .phone-screen {
-        border-left: 1px solid #111;
-        border-right: 1px solid #111;
-      }
+      font-size: 24px;
+      z-index: 10;
     }
   </style>
 </head>
@@ -200,53 +189,40 @@
     <div class="date">30 April 2026 at 21:36</div>
 
     <section class="note-content">
-      <h1 class="note-title">Notes app?</h1>
-      <p class="note-text">And here goes nothing.
+      <h1 class="note-title">This is simply something I feel needs to be said.</h1>
 
-I’m not expecting a response, this is simply something I feel needs to be said. It’s been on my mind, and my friends are tired of hearing it on repeat.
+      <p class="note-text">I remember that February night in 2025 when I first saw you. You were the last person I scrolled past before going to sleep, and it somehow stuck with me. Even talking to you back then felt different, quite strange. We weren’t even really talking, but something felt distinct about you. A quiet sense of knowing. Life got busy, you were still just a stranger, and I wasn’t great at replying. But somehow I always knew you’d message again. I was certain you wouldn’t disappear and yet equally sure you’d remain just a stranger.
 
-I still remember it so vividly, that February night in 2025 when i first saw you on the internet. You were the last person I saw before I went to sleep and it somehow stuck with me. Even talking to you back then felt different, almost strange. We werent even talking like that back then, but something felt different about you. This sense of knowing. Life got busy, and you were still just a stranger, so I wasn’t great at replying. But somehow, I always knew you would message me again. I was certain you wouldn’t disappear, yet I was equally sure you would remain just a stranger.
+Then July came, and everything in my life shifted. I was more open, more receptive. And that’s when you reappeared.
 
-Then July came, and everything in my life shifted. I was more open, more receptive to new people. And that’s when you reappeared.
+I’ve always been open with my friends about what’s going on in my life, but with you it was different. I told no one. And because of that, I was completely myself - unfiltered, unafraid. I simply enjoyed your presence, our little conversations.
 
-I’ve always been open with my friends about what’s going on in my life, but with you, it was different. I didn’t tell anyone. No one knew. And because of that, I was able to be completely myself — unfiltered, unafraid. I wasn’t scared of losing you, even though everything around me was changing at the time. I simply enjoyed your presence, our little conversations.
+Then we met for the first time. And I felt relief. There was a click - quiet, calm. Unlike anything before. I was so lost in that feeling I could barely focus on what you were saying for the first fifteen minutes. I went home that day feeling peacefully happy.
 
-Then we met for the first time. And honestly… I felt relief. There was a click — but it was quiet, calm. Unlike anything I had ever felt before. I was so lost in that feeling that I could barely focus on what you were saying for the first fifteen minutes. I went home that day feeling… peacefully happy.
+The second time we met, same calmness. But when you came closer, something inside me shifted. I just knew. No words for it.
 
-The second time we met, it was the same calmness. But when you came closer, something inside me shifted. I just knew. I can’t explain it, there were no words for it.
-
-The next day, I respected your decision to keep your distance. I had no choice, haha. But deep down, I always knew you would come back. Still, I was left with this unknown feeling, and it hurt more times than I can count. Yet I did nothing but tell myself, “It will pass.” Because I know once I stop caring, there’s no way back. So I was waiting for the moment it would stop hurting.
+The next day I respected your decision to keep your distance. I had no choice, haha. But deep down I always knew you’d come back. Still, I was left with this unknown feeling. I did nothing but tell myself it will pass.
 
 But you always came back.
 
-And eventually, I realized they were reminders. And the strangest part? I felt you before you texted me. Every time. It was an intuition so strong it scared even my friends. I would say it out loud — and then your message would come. I tried so hard to move past that feeling, to overcome it, but nothing ever reached that depth. I tried everything to get me out of my head - isolating myself, exhausting myself, running 72 kilometers on a random Tuesday, making lots and lots of art, coming back to my old hobbies. Nothing worked.
+And eventually I realised they were reminders. The strangest part? I felt you before you texted me. Every single time. An intuition so strong it scared even my friends. I’d say your name out loud and then your message would arrive. I tried so hard to move past it. I tried everything - isolating myself, exhausting myself, running 72 kilometres on a random Tuesday, making art, going back to old hobbies. Nothing worked.
 
-When i was on the trip with my friend in January, somehow i ended up talking to a pilot and it just suddenly hit me that i was no near to forgetting you.
+When I was on a trip in January, I ended up talking to a pilot on a plane, and it just hit me - I was nowhere near forgetting you.
 
-And through all of this, I grew. A lot. I know that, technically, not much happened between us. But tbh it doesnt matter if im right or if im wrong about any of this, just matters that i felt it. Bc what i felt was real. You were never a game to me. And despite my fear of any connections like this, you were the only person that cracked me open.
+Through all of it, I grew. A lot. I know technically not much happened between us. But honestly it doesn’t matter whether I’m right or wrong about any of this - what matters is that I felt it. And what I felt was real. Despite my fear of connections like this. I still saw you as a potential friend.
 
-It was never about your looks or specific traits of your personality. It was simply you, something deeper, something I recognized without being able to explain it. It wasnt potential, it was something real. Something special.
+It was never about specific traits. It was simply you - something deeper, something I recognised without being able to explain it. Not potential. Something real. Something singular.
 
-For six months, I respected your need for distance, and still, everything i felt remained.
+For six months I respected your need for distance, and still, everything I felt remained.
 
-And when I saw you again in February i felt peace. Like I had come home. It wasn’t about what you said or did — although I was amazed you remembered the smallest details about me. It was just that feeling again. Calm. Certain.
+When I saw you again in February, I felt peace. Like coming home. It wasn’t about what you said or did, although I was quietly amazed you remembered the smallest details about me. It was just that feeling again. Calm. Certain.
 
 There are still so many things I haven’t told you. But this felt important to say.
 
-And one more thing - something oddly specific. You look like my grandfather did when he was around your age. I didn’t even realize it until months later.
+I’m not sure where I was going with this. It just needed to be said. I’m fully aware of where I stand with you - I’ve heard you say it, I remember, I know - so this is really just me getting it off my chest. 
 
-As I said, i dont know where i was going with this message, just felt like this needed to be said to you. Totally aware about how and where you see me, i have heard you say it, i remember, i know, so this is more about me getting it off my chest in a few words.</p>
+And something oddly specific is you look like my grandfather did when he was around your age. I didn’t even realise it until months later.</p>
     </section>
-
-    <div class="bottom-bar">
-      <span>☑️</span>
-      <span>⌒</span>
-      <span>📎</span>
-      <span>✎</span>
-      <span>✣</span>
-    </div>
-
-    <div class="compose-btn">□</div>
   </main>
 </body>
 </html>
