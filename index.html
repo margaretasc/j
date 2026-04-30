@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apple Notes Style</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #000;
+      color: #f5f5f7;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+        "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .phone-screen {
+      width: 100%;
+      max-width: 430px;
+      height: 100vh;
+      margin: 0 auto;
+      background: #000;
+      position: relative;
+      padding: 48px 28px 120px;
+    }
+
+    .status-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 17px;
+      font-weight: 600;
+      color: #f5f5f7;
+      margin-bottom: 45px;
+    }
+
+    .status-icons {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      font-size: 15px;
+    }
+
+    .top-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .circle-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #1c1c1e;
+      border: 1px solid #2c2c2e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #f5f5f7;
+      font-size: 34px;
+      line-height: 1;
+    }
+
+    .right-controls {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .pill-btn {
+      height: 50px;
+      min-width: 88px;
+      padding: 0 18px;
+      border-radius: 28px;
+      background: #1c1c1e;
+      border: 1px solid #2c2c2e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 17px;
+      color: #f5f5f7;
+      font-size: 27px;
+    }
+
+    .date {
+      text-align: center;
+      color: #8e8e93;
+      font-size: 16px;
+      font-weight: 500;
+      margin: 20px 0 22px;
+      letter-spacing: 0.2px;
+    }
+
+    .note-content {
+      padding-top: 2px;
+    }
+
+    .note-title {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.6px;
+      margin-bottom: 42px;
+      color: #f5f5f7;
+    }
+
+    .note-text {
+      font-size: 23px;
+      font-weight: 400;
+      letter-spacing: -0.3px;
+      color: #f5f5f7;
+      line-height: 1.35;
+    }
+
+    .bottom-bar {
+      position: absolute;
+      left: 28px;
+      bottom: 34px;
+      height: 56px;
+      width: 235px;
+      border-radius: 32px;
+      background: #1c1c1e;
+      border: 1px solid #2c2c2e;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      color: #f5f5f7;
+      font-size: 30px;
+    }
+
+    .compose-btn {
+      position: absolute;
+      right: 28px;
+      bottom: 34px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #1c1c1e;
+      border: 1px solid #2c2c2e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #f5f5f7;
+      font-size: 28px;
+    }
+
+    .battery {
+      background: #a8a8a8;
+      color: #000;
+      border-radius: 8px;
+      padding: 1px 7px;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    @media (min-width: 431px) {
+      body {
+        display: flex;
+        justify-content: center;
+      }
+
+      .phone-screen {
+        border-left: 1px solid #111;
+        border-right: 1px solid #111;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="phone-screen">
+    <div class="status-bar">
+      <div>21:37</div>
+      <div class="status-icons">
+        <span>▮▮▮</span>
+        <span>⌁</span>
+        <span class="battery">32</span>
+      </div>
+    </div>
+
+    <div class="top-controls">
+      <div class="circle-btn">‹</div>
+
+      <div class="right-controls">
+        <div class="circle-btn">↶</div>
+        <div class="pill-btn">
+          <span>⇧</span>
+          <span>···</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="date">30 April 2026 at 21:36</div>
+
+    <section class="note-content">
+      <h1 class="note-title">Notes app?</h1>
+      <p class="note-text">And here goes nothing.
+
+I’m not expecting a response, this is simply something I feel needs to be said. It’s been on my mind, and my friends are tired of hearing it on repeat.
+
+I still remember it so vividly, that February night in 2025 when i first saw you on the internet. You were the last person I saw before I went to sleep and it somehow stuck with me. Even talking to you back then felt different, almost strange. We werent even talking like that back then, but something felt different about you. This sense of knowing. Life got busy, and you were still just a stranger, so I wasn’t great at replying. But somehow, I always knew you would message me again. I was certain you wouldn’t disappear, yet I was equally sure you would remain just a stranger.
+
+Then July came, and everything in my life shifted. I was more open, more receptive to new people. And that’s when you reappeared.
+
+I’ve always been open with my friends about what’s going on in my life, but with you, it was different. I didn’t tell anyone. No one knew. And because of that, I was able to be completely myself — unfiltered, unafraid. I wasn’t scared of losing you, even though everything around me was changing at the time. I simply enjoyed your presence, our little conversations.
+
+Then we met for the first time. And honestly… I felt relief. There was a click — but it was quiet, calm. Unlike anything I had ever felt before. I was so lost in that feeling that I could barely focus on what you were saying for the first fifteen minutes. I went home that day feeling… peacefully happy.
+
+The second time we met, it was the same calmness. But when you came closer, something inside me shifted. I just knew. I can’t explain it, there were no words for it.
+
+The next day, I respected your decision to keep your distance. I had no choice, haha. But deep down, I always knew you would come back. Still, I was left with this unknown feeling, and it hurt more times than I can count. Yet I did nothing but tell myself, “It will pass.” Because I know once I stop caring, there’s no way back. So I was waiting for the moment it would stop hurting.
+
+But you always came back.
+
+And eventually, I realized they were reminders. And the strangest part? I felt you before you texted me. Every time. It was an intuition so strong it scared even my friends. I would say it out loud — and then your message would come. I tried so hard to move past that feeling, to overcome it, but nothing ever reached that depth. I tried everything to get me out of my head - isolating myself, exhausting myself, running 72 kilometers on a random Tuesday, making lots and lots of art, coming back to my old hobbies. Nothing worked.
+
+When i was on the trip with my friend in January, somehow i ended up talking to a pilot and it just suddenly hit me that i was no near to forgetting you.
+
+And through all of this, I grew. A lot. I know that, technically, not much happened between us. But tbh it doesnt matter if im right or if im wrong about any of this, just matters that i felt it. Bc what i felt was real. You were never a game to me. And despite my fear of any connections like this, you were the only person that cracked me open.
+
+It was never about your looks or specific traits of your personality. It was simply you, something deeper, something I recognized without being able to explain it. It wasnt potential, it was something real. Something special.
+
+For six months, I respected your need for distance, and still, everything i felt remained.
+
+And when I saw you again in February i felt peace. Like I had come home. It wasn’t about what you said or did — although I was amazed you remembered the smallest details about me. It was just that feeling again. Calm. Certain.
+
+There are still so many things I haven’t told you. But this felt important to say.
+
+And one more thing - something oddly specific. You look like my grandfather did when he was around your age. I didn’t even realize it until months later.
+
+As I said, i dont know where i was going with this message, just felt like this needed to be said to you. Totally aware about how and where you see me, i have heard you say it, i remember, i know, so this is more about me getting it off my chest in a few words.</p>
+    </section>
+
+    <div class="bottom-bar">
+      <span>☑️</span>
+      <span>⌒</span>
+      <span>📎</span>
+      <span>✎</span>
+      <span>✣</span>
+    </div>
+
+    <div class="compose-btn">□</div>
+  </main>
+</body>
+</html>
